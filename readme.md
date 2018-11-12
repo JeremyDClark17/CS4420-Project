@@ -18,7 +18,7 @@ php artisan key:generate
 - DB_PASSWORD= [whatever your password is in phpmyadmin]
 
 
-##  then run:
+##  make sure you have mamp setup and have a local db running and a user account with a password setup and running then run:
 
 php artisan migrate
 
