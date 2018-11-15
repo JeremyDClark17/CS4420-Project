@@ -1,4 +1,4 @@
-##  Alright, so once you've pulled all this new stuff and have php and composer installed, cd into gameRanker then run:
+##  Alright, so once you've pulled all this new stuff and have php and composer installed, cd into main workspace folder, then run:
 
 composer install
 
