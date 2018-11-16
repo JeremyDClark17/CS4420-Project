@@ -20,6 +20,7 @@ class User extends Authenticatable
     ];
 
     /**
+     *'avatar', 'game1', 'game2', 'game3', 'game4', 'game5', 'bio',
      * The attributes that should be hidden for arrays.
      *
      * @var array
