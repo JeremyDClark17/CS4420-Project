@@ -14,12 +14,3 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/profile', ['as' => 'profile', 'uses' => 'UserController@show']);
-
-Route::get('/profile/edit',  ['as' => 'edit_profile', 'uses' => 'UserController@edit']);
-Route::patch('/profile/update',  ['as' => 'update_profile', 'uses' => 'UserController@update']);
