@@ -47,7 +47,7 @@
                     @endif
                 </li>
               @else
-                  <a href="/profile"><img src= "{{ Auth::user()->avatar }}" class= 'avatarThumbnail hidden-sm hidden-xs' href="/users/profile"></a>
+                  <a href="/profile"><img src= "{{ Auth::user()->avatar }}" class= 'avatarThumbnail hidden-sm hidden-xs' href="/profile"></a>
                 <li>
                   <a class="topdown navbar-brand right-pad" href="/profile">&nbsp{{ Auth::user()->name }}</a>
                 </li>
@@ -55,10 +55,9 @@
                   <ul class="dropdown-menu ">
                     <li ><a class="text-left" href="/">Settings[HOME {Coming Soon}]</a></li><!--<li><%= link_to 'Settings', edit_user_registration_path %></li>-->
                     <li role="separator" class="divider"></li>
-                    <li class="dropdown-item" href="{{ route('logout') }}"
-                       onclick="event.preventDefault();
-                                     document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
+                    <li><a class="text-left" href="{{ route('logout') }}"
+                       onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}</a>
                     </li>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
@@ -71,7 +70,7 @@
         </div>
       </div>
     </nav>
-    <main class="py-4">
+    <main class="py-4" style="padding-top: 75px;">
         @yield('content')
     </main>
     </div>

@@ -18,7 +18,6 @@
       <section class="mainContent">
         <section class="section1">
           <div class="section1Content">
-              <img src="{{ Auth::user()->avatar }}">
               <h3 align="left" class="uname"><span>Email:</span>  {{ Auth::user()->email }}</p>
               <h3 align="left" class="uname"><span>Desription:</span>  {{ Auth::user()->bio }}</p>
               <a href="/profile/edit"><button><h3 align="left" class="uname"><span>Edit Profile</span></p></button></a>
