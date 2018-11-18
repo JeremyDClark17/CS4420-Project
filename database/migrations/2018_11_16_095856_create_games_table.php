@@ -13,15 +13,15 @@ class CreateGamesTable extends Migration
      */
     public function up()
     {
-      Schema::create('games', function (Blueprint $table) {
-          $table->increments('id');
-          $table->timestamp('added_at')->nullable();
-          $table->string('title');
-          $table->string('instances'); //overall rating number
-          $table->string('comments');
-          $table->string('image');
-          $table->string('description');
-      });
+        Schema::create('games', function (Blueprint $table) {
+            $table->increments('id');
+            $table->timestamp('added_at')->nullable();
+            $table->string('title');
+            $table->string('instances'); //overall rating number
+            $table->string('comments');
+            $table->string('image');
+            $table->string('description');
+        });
     }
 
     /**

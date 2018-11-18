@@ -31,7 +31,7 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myInverseNavbar2" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-          <a class="navbar-brand" href="/" ><a class="navbar-brand CyperLogo2" href="/home" >Game Ranker</a></a>
+          <a class="navbar-brand" href="/" ><a class="navbar-brand CyperLogo2" href="/" >Game Ranker</a></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="myInverseNavbar2">
