@@ -17,65 +17,63 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <link href="{{ asset('css/application.css') }}" rel="stylesheet">
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
+<html>
+</div>
+  <head>
 
-                    </ul>
+    <script type='text/javascript' src='/javascripts/application.js'></script>
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            <li class="nav-item">
-                                @if (Route::has('register'))
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                @endif
-                            </li>
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-
-                                  <a class="dropdown-item" href="{{ route('logout') }}"
-                                     onclick="event.preventDefault();
-                                                   document.getElementById('logout-form').submit();">
-                                      {{ __('Logout') }}
-                                  </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <main class="py-4">
-            @yield('content')
-        </main>
+    <div class="navbar-padding">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myInverseNavbar2" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+          <a class="navbar-brand" href="/" ><a class="navbar-brand CyperLogo2" href="/home" >Game Ranker</a></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="myInverseNavbar2">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              @guest
+                <li class="nav-item">
+                    <a class="topdown navbar-brand right-pad" href="{{ route('login') }}">{{ __('Login') }}</a>
+                </li>
+                <li class="nav-item">
+                    @if (Route::has('register'))
+                        <a class="topdown navbar-brand right-pad" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    @endif
+                </li>
+              @else
+                  <a href="/profile"><img src= "{{ Auth::user()->avatar }}" class= 'avatarThumbnail hidden-sm hidden-xs' href="/users/profile"></a>
+                <li>
+                  <a class="topdown navbar-brand right-pad" href="/profile">&nbsp{{ Auth::user()->name }}</a>
+                </li>
+                <li class="dropdown"> <a href="#" class="dropdown-toggle navbar-brand" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">Account<span class="caret"></span></a>
+                  <ul class="dropdown-menu ">
+                    <li ><a class="text-left" href="/">Settings[HOME {Coming Soon}]</a></li><!--<li><%= link_to 'Settings', edit_user_registration_path %></li>-->
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-item" href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                                     document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </li>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                  </ul>
+                </li>
+              @endguest
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="py-4">
+        @yield('content')
+    </main>
     </div>
-</body>
+  </head>
 </html>

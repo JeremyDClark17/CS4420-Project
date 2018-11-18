@@ -17,7 +17,7 @@ public function putUpdateUser( EditUserRequest $request ){
   $game3                = $request->get('game3');
   $game4                = $request->get('game4');
   $game5                = $request->get('game5');
-  $bio                = $request->get('bio');
+  $bio                  = $request->get('bio');
 
   /*
     Ensure the user has entered a favorite coffee

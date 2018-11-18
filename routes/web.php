@@ -19,4 +19,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::put('/user', 'API\UsersController@putUpdateUser');
+Route::get('/profile', function () {
+  if(Auth::check()){
+    return view('profile');
+     }
+  else{
+    return redirect('/');
+  }
+});
