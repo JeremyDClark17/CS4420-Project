@@ -19,6 +19,8 @@ class CreateGamesTable extends Migration
             $table->string('title');
             $table->string('instances'); //overall rating number
             $table->string('comments');
+            $table->string('image');
+            $table->string('description');
         });
     }
 
