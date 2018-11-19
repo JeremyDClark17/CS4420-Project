@@ -1107,7 +1107,7 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #337ab7;
+  color: #000000;
   text-decoration: none;
 }
 a:hover,
@@ -1232,7 +1232,7 @@ h2,
 .h2,
 h3,
 .h3 {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 h1 small,

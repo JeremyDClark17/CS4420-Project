@@ -6,7 +6,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Light Theme</title>
+<title>{{ Auth::user()->name }}</title>
 <link href="{{ url('css/show.css') }}" rel="stylesheet" type="text/css" />
 <!--<script type='text/javascript' src='/js/profile.js'></script>-->
 </head>
@@ -18,67 +18,89 @@
       <section class="mainContent">
         <section class="section1">
           <div class="section1Content">
-              <h3 align="left" class="uname"><span>Email:</span>  {{ Auth::user()->email }}</p>
-              <h3 align="left" class="uname"><span>Desription:</span>  {{ Auth::user()->bio }}</p>
+              <h3 align="left" class="uname"><span>Email:</span>  {{ Auth::user()->email }}</h3>
+              <h3 align="left" class="uname"><span>Desription:</span>  {{ Auth::user()->bio }}</h3>
+              <a href="/profile/edit"><button><h4 align="left" class="uname">Edit Profile</h4></button></a>
           </div>
         </section>
       </section>
     </section>
   </aside>
 </div>
+<br>
 <hr>
 <div class="gallery">
   <a href=""> <!--INSERT game LINK here -->
-    <div class="thumbnail"><img src='/img/addGame.jpg' width="2000" class="cards-contain"/><!--INSERT game image here -->
-      <h4>{{$game1->title}}</h4>
-      <p class="tag">Rating: ((Game's instance))</p>
+        @foreach ($games as $game)
+          @if ($user->game1 == $game->id)
+          <div class="thumbnail"><img src='{{$game->image}}' width="2000" class="cards-contain"/><!--INSERT game image here -->
+          <h4>{{ $game->title }}</h4>
+          <p class="tag">Popularity: {{$game->instances}}</p>
+          @endif
+        @endforeach
       <li class="dropdown"> <a href="#" class="dropdown-toggle uname" style="font-size: 58px;" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">⫶<span class="caret"></span></a>
         <ul class="dropdown-menu ">
-          <li ><a class="text-left" href="">Edit Game 1</a></li>
+          <li ><a class="text-left" href="">View Game</a></li>
         </ul>
       </li>
     </div>
   </a>
   <a href=""> <!--INSERT game LINK here -->
-    <div class="thumbnail"><img src='/img/addGame.jpg' width="2000" class="cards-contain"/><!--INSERT game image here -->
-      <h4>((Title of game))</h4>
-      <p class="tag">Rating: ((Game's instance))</p>
+        @foreach ($games as $game)
+          @if ($user->game2 == $game->id)
+          <div class="thumbnail"><img src='{{$game->image}}' width="2000" class="cards-contain"/><!--INSERT game image here -->
+          <h4>{{ $game->title }}</h4>
+          <p class="tag">Popularity: {{$game->instances}}</p>
+          @endif
+        @endforeach
       <li class="dropdown"> <a href="#" class="dropdown-toggle uname" style="font-size: 58px;" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">⫶<span class="caret"></span></a>
         <ul class="dropdown-menu ">
-          <li ><a class="text-left" href="">Edit Game 2</a></li>
+          <li ><a class="text-left" href="">View Game</a></li>
         </ul>
       </li>
     </div>
   </a>
   <a href=""> <!--INSERT game LINK here -->
-    <div class="thumbnail"><img src='/img/addGame.jpg' width="2000" class="cards-contain"/><!--INSERT game image here -->
-      <h4>((Title of game))</h4>
-      <p class="tag">Rating: ((Game's instance))</p>
+        @foreach ($games as $game)
+          @if ($user->game3 == $game->id)
+          <div class="thumbnail"><img src='{{$game->image}}' width="2000" class="cards-contain"/><!--INSERT game image here -->
+          <h4>{{ $game->title }}</h4>
+          <p class="tag">Popularity: {{$game->instances}}</p>
+          @endif
+        @endforeach
       <li class="dropdown"> <a href="#" class="dropdown-toggle uname" style="font-size: 58px;" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">⫶<span class="caret"></span></a>
         <ul class="dropdown-menu ">
-          <li ><a class="text-left" href="">Edit Game 3</a></li>
+          <li ><a class="text-left" href="">View Game</a></li>
         </ul>
       </li>
     </div>
   </a>
   <a href=""> <!--INSERT game LINK here -->
-    <div class="thumbnail"><img src='/img/addGame.jpg' width="2000" class="cards-contain"/><!--INSERT game image here -->
-      <h4>((Title of game))</h4>
-      <p class="tag">Rating: ((Game's instance))</p>
+        @foreach ($games as $game)
+          @if ($user->game4 == $game->id)
+          <div class="thumbnail"><img src='{{$game->image}}' width="2000" class="cards-contain"/><!--INSERT game image here -->
+          <h4>{{ $game->title }}</h4>
+          <p class="tag">Popularity: {{$game->instances}}</p>
+          @endif
+        @endforeach
       <li class="dropdown"> <a href="#" class="dropdown-toggle uname" style="font-size: 58px;" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">⫶<span class="caret"></span></a>
         <ul class="dropdown-menu ">
-          <li ><a class="text-left" href="">Edit Game 4</a></li>
+          <li ><a class="text-left" href="">View Game</a></li>
         </ul>
       </li>
     </div>
   </a>
   <a href=""> <!--INSERT game LINK here -->
-    <div class="thumbnail"><img src='/img/addGame.jpg' width="2000" class="cards-contain"/><!--INSERT game image here -->
-      <h4>((Title of game))</h4>
-      <p class="tag">Rating: ((Game's instance))</p>
+        @foreach ($games as $game)
+          @if ($user->game5 == $game->id)
+          <div class="thumbnail"><img src='{{$game->image}}' width="2000" class="cards-contain"/><!--INSERT game image here -->
+          <h4>{{ $game->title }}</h4>
+          <p class="tag">Popularity: {{$game->instances}}</p>
+          @endif
+        @endforeach
       <li class="dropdown"> <a href="#" class="dropdown-toggle uname" style="font-size: 58px;" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">⫶<span class="caret"></span></a>
         <ul class="dropdown-menu ">
-          <li ><a class="text-left" href="">Edit Game 5</a></li>
+          <li ><a class="text-left" href="">View Game</a></li>
         </ul>
       </li>
     </div>

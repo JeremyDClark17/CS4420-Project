@@ -88,7 +88,7 @@
                         @if(($game->id) == 2) <!--whatever the null game is-->
                         @else
                             <div class="well">
-                                <img src={{$game->image}}>
+                                <img src='{{$game->image}}'>
                                 <h3 style="text-align:center;">{{$game->title}}</h3>
                                 <h3 style="text-align:center;">Popularity: {{$game->instances}}</h3>
                                 <a href="{{ url('/') }}">Read more</a>
