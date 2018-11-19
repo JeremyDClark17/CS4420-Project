@@ -5828,9 +5828,10 @@ button.list-group-item-danger.active:focus {
   padding-bottom: 75%;
 }
 .well {
-  min-height: 20px;
-  padding: 19px;
-  margin-bottom: 20px;
+  float: left;
+  width: 25%;
+  min-height: 400px;
+  padding: 19px 19px 0px 19px;
   background-color: #f5f5f5;
   border: 1px solid #e3e3e3;
   border-radius: 4px;
