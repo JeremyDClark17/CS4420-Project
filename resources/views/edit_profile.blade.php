@@ -13,8 +13,13 @@
     <h1>Edit Post</h1>
     {!! Form::open(['action' => ['UserController@update'], 'method' => 'PATCH', 'enctype' => 'multipart/form-data']) !!}
         <div class="form-group">
+
+            <!--{{Form::label('avatar', 'Avatar')}}
+            {{Form::file('avatar')}}-->
+
             {{Form::label('avatar', 'Avatar')}}
-            {{Form::file('avatar')}}
+            {{Form::text('avatar', $user->avatar, ['class' => 'form-control', 'placeholder' => 'Address of your profile picture'])}}
+
         </div>
         <div class="form-group">
             {{Form::label('bio', 'Bio')}}
