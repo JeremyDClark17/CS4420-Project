@@ -55,9 +55,7 @@
                   <ul class="dropdown-menu ">
                     <li ><a class="text-left" href="home">Settings[HOME {Coming Soon}]</a></li><!--<li><%= link_to 'Settings', edit_user_registration_path %></li>-->
                     <li role="separator" class="divider"></li>
-                    <li><a class="text-left" href="{{ route('logout') }}"
-                       onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}</a>
+                    <li><a class="text-left" href="logout">Logout</a>
                     </li>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf

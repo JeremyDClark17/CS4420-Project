@@ -21,3 +21,4 @@ Route::get('/profile', ['as' => 'profile', 'uses' => 'UserController@show']);
 
 Route::get('/profile/edit',  ['as' => 'edit_profile', 'uses' => 'UserController@edit']);
 Route::patch('/profile/update',  ['as' => 'update_profile', 'uses' => 'UserController@update']);
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
