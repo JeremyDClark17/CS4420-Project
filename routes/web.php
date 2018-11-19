@@ -11,11 +11,11 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/home', 'WelcomeController@index');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');    <- changing to welcome page but keeping the welcome controller
 
 Route::get('/profile', ['as' => 'profile', 'uses' => 'UserController@show']);
 

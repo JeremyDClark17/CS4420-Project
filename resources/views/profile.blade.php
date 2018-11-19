@@ -20,7 +20,7 @@
           <div class="section1Content">
               <h3 align="left" class="uname"><span>Email:</span>  {{ Auth::user()->email }}</h3>
               <h3 align="left" class="uname"><span>Desription:</span>  {{ Auth::user()->bio }}</h3>
-              <a href="/profile/edit"><button><h4 align="left" class="uname">Edit Profile</h4></button></a>
+              <a href="profile/edit"><button><h4 align="left" class="uname">Edit Profile</h4></button></a>
           </div>
         </section>
       </section>
@@ -38,11 +38,6 @@
           <p class="tag">Popularity: {{$game->instances}}</p>
           @endif
         @endforeach
-      <li class="dropdown"> <a href="#" class="dropdown-toggle uname" style="font-size: 58px;" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">⫶<span class="caret"></span></a>
-        <ul class="dropdown-menu ">
-          <li ><a class="text-left" href="">View Game</a></li>
-        </ul>
-      </li>
     </div>
   </a>
   <a href=""> <!--INSERT game LINK here -->
@@ -53,11 +48,6 @@
           <p class="tag">Popularity: {{$game->instances}}</p>
           @endif
         @endforeach
-      <li class="dropdown"> <a href="#" class="dropdown-toggle uname" style="font-size: 58px;" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">⫶<span class="caret"></span></a>
-        <ul class="dropdown-menu ">
-          <li ><a class="text-left" href="">View Game</a></li>
-        </ul>
-      </li>
     </div>
   </a>
   <a href=""> <!--INSERT game LINK here -->
@@ -68,11 +58,6 @@
           <p class="tag">Popularity: {{$game->instances}}</p>
           @endif
         @endforeach
-      <li class="dropdown"> <a href="#" class="dropdown-toggle uname" style="font-size: 58px;" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">⫶<span class="caret"></span></a>
-        <ul class="dropdown-menu ">
-          <li ><a class="text-left" href="">View Game</a></li>
-        </ul>
-      </li>
     </div>
   </a>
   <a href=""> <!--INSERT game LINK here -->
@@ -83,11 +68,6 @@
           <p class="tag">Popularity: {{$game->instances}}</p>
           @endif
         @endforeach
-      <li class="dropdown"> <a href="#" class="dropdown-toggle uname" style="font-size: 58px;" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">⫶<span class="caret"></span></a>
-        <ul class="dropdown-menu ">
-          <li ><a class="text-left" href="">View Game</a></li>
-        </ul>
-      </li>
     </div>
   </a>
   <a href=""> <!--INSERT game LINK here -->
@@ -98,11 +78,6 @@
           <p class="tag">Popularity: {{$game->instances}}</p>
           @endif
         @endforeach
-      <li class="dropdown"> <a href="#" class="dropdown-toggle uname" style="font-size: 58px;" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">⫶<span class="caret"></span></a>
-        <ul class="dropdown-menu ">
-          <li ><a class="text-left" href="">View Game</a></li>
-        </ul>
-      </li>
     </div>
   </a>
 </div>

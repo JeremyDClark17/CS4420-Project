@@ -63,7 +63,7 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <div class="container">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -79,26 +79,26 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Game Ranker
-                </div>
-                <div class="games">
-                    @if(count($games) >= 1)
-                        @foreach($games as $game)
-                        @if(($game->id) == 2) <!--whatever the null game is-->
-                        @else
-                            <div class="well">
-                                <img src='{{$game->image}}'>
-                                <h3 style="text-align:center;">{{$game->title}}</h3>
-                                <h3 style="text-align:center;">Popularity: {{$game->instances}}</h3>
-                                <a href="{{ url('/') }}">Read more</a>
-                            </div>
-                            @endif
-                        @endforeach
-                    @else
-                        <p>No Games Found!</p>
-                    @endif
-
+                <div class="title">Game Ranker</div>
+                <hr class=" m-b-md">
+                <div class="gallery">
+                  @if(count($games) >= 1)
+                      @foreach($games as $game)
+                      @if(($game->id) == 2) <!--whatever the null game is-->
+                      @else
+                      <div class="well">
+                        <a href=""> <!--INSERT game LINK here -->
+                          <div class="thumbnail"><img src='{{$game->image}}' width="2000" class="cards-contain"/><!--INSERT game image here -->
+                            <h4>{{ $game->title }}</h4>
+                            <p class="tag">Popularity: {{$game->instances}}</p>
+                          </div>
+                        </a>
+                      </div>
+                          @endif
+                      @endforeach
+                  @else
+                      <p>No Games Found!</p>
+                  @endif
                 </div>
             </div>
         </div>

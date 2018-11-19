@@ -10,7 +10,7 @@ class WelcomeController extends Controller
     public function index()
     {
         $games = Game::all();
-        
+
         return view('welcome')->with('games', $games);
     }
 }
