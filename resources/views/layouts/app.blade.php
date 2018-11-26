@@ -53,7 +53,7 @@
                 </li>
                 <li class="dropdown"> <a href="#" class="dropdown-toggle navbar-brand" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">Account<span class="caret"></span></a>
                   <ul class="dropdown-menu ">
-                    <li ><a class="text-left" href="/home">Settings[HOME {Coming Soon}]</a></li><!--<li><%= link_to 'Settings', edit_user_registration_path %></li>-->
+                    <li ><a class="text-left" href="/profile/edit">Edit Profile</a></li>
                     <li role="separator" class="divider"></li>
                     <li><a class="text-left" href="/logout">Logout</a>
                     </li>

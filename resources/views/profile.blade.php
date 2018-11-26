@@ -20,7 +20,6 @@
           <div class="section1Content">
               <h3 align="left" class="uname"><span>Email:</span>  {{ Auth::user()->email }}</h3>
               <h3 align="left" class="uname"><span>Desription:</span>  {{ Auth::user()->bio }}</h3>
-              <a href="profile/edit"><button><h4 align="left" class="uname">Edit Profile</h4></button></a>
           </div>
         </section>
       </section>
