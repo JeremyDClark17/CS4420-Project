@@ -23,9 +23,12 @@ Route::get('/profile/edit',  ['as' => 'edit_profile', 'uses' => 'UserController@
 
 Route::patch('/profile/update',  ['as' => 'update_profile', 'uses' => 'UserController@update']);
 
+Route::get('/profile/{id}', 'profileGameController@index');
+
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('/aboutgame/{id}', 'aboutGameController@index');
+
 
 Route::get('/', function () {
     return redirect('home');
