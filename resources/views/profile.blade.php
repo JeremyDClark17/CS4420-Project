@@ -30,7 +30,7 @@
 <br>
 <hr>
 <div class="gallery">
-  <a href="/profile/1"> <!--INSERT game LINK here -->
+  <a href="profile/1"> <!--INSERT game LINK here -->
         @foreach ($games as $game)
           @if ($user->game1 == $game->id)
           <div class="thumbnail"><img src='{{$game->image}}' width="2000" class="cards-contain"/><!--INSERT game image here -->
@@ -40,7 +40,7 @@
         @endforeach
     </div>
   </a>
-  <a href="/profile/2"> <!--INSERT game LINK here -->
+  <a href="profile/2"> <!--INSERT game LINK here -->
         @foreach ($games as $game)
           @if ($user->game2 == $game->id)
           <div class="thumbnail"><img src='{{$game->image}}' width="2000" class="cards-contain"/><!--INSERT game image here -->
@@ -50,7 +50,7 @@
         @endforeach
     </div>
   </a>
-  <a href="/profile/3"> <!--INSERT game LINK here -->
+  <a href="profile/3"> <!--INSERT game LINK here -->
         @foreach ($games as $game)
           @if ($user->game3 == $game->id)
           <div class="thumbnail"><img src='{{$game->image}}' width="2000" class="cards-contain"/><!--INSERT game image here -->
@@ -60,7 +60,7 @@
         @endforeach
     </div>
   </a>
-  <a href="/profile/4"> <!--INSERT game LINK here -->
+  <a href="profile/4"> <!--INSERT game LINK here -->
         @foreach ($games as $game)
           @if ($user->game4 == $game->id)
           <div class="thumbnail"><img src='{{$game->image}}' width="2000" class="cards-contain"/><!--INSERT game image here -->
@@ -70,7 +70,7 @@
         @endforeach
     </div>
   </a>
-  <a href="/profile/5"> <!--INSERT game LINK here -->
+  <a href="profile/5"> <!--INSERT game LINK here -->
         @foreach ($games as $game)
           @if ($user->game5 == $game->id)
           <div class="thumbnail"><img src='{{$game->image}}' width="2000" class="cards-contain"/><!--INSERT game image here -->
