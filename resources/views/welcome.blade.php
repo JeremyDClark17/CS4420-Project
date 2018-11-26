@@ -19,7 +19,7 @@
                     @if(($game->id) == 2) <!--whatever the null game is-->
                     @else
                       <div class="well">
-                        <a href=""> <!--INSERT game LINK here -->
+                        <a href="aboutgame/{{ $game->id }}" title="aboutGame"> <!--INSERT game LINK here -->
                           <div class="thumbnail"><img src='{{$game->image}}' width="2000" class="cards-contain"/><!--INSERT game image here -->
                             <h4>{{ $game->title }}</h4>
                             <p class="tag">Popularity: {{$game->instances}}</p>

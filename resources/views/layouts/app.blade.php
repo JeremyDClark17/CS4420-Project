@@ -31,7 +31,7 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myInverseNavbar2" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-          <a class="navbar-brand" href="home" ><a class="navbar-brand CyperLogo2" href="home" >Game Ranker</a></a>
+          <a class="navbar-brand" href="/home" ><a class="navbar-brand CyperLogo2" href="/home" >Game Ranker</a></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="myInverseNavbar2">
@@ -53,7 +53,7 @@
                 </li>
                 <li class="dropdown"> <a href="#" class="dropdown-toggle navbar-brand" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">Account<span class="caret"></span></a>
                   <ul class="dropdown-menu ">
-                    <li ><a class="text-left" href="home">Settings[HOME {Coming Soon}]</a></li><!--<li><%= link_to 'Settings', edit_user_registration_path %></li>-->
+                    <li ><a class="text-left" href="/home">Settings[HOME {Coming Soon}]</a></li><!--<li><%= link_to 'Settings', edit_user_registration_path %></li>-->
                     <li role="separator" class="divider"></li>
                     <li><a class="text-left" href="logout">Logout</a>
                     </li>
